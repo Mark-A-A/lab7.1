@@ -39,12 +39,23 @@ $(document).ready(function(){
       console.log(userChoice);
       
     /* Add logic here
-    if (){
+    rock = 0
+    paper = 1
+    scissors =2
 
-    }else if(){
+    if (userChoice === 0  && computerChoice === 1){ // 
 
-    }else {
+    }else if(userChoice === 0 && computerChoice === 2 ){
 
+    }else if(userChoice === 1 && computerChoice = 0){
+    
+    }else if(userChoice === 1 && computerChoice = 2){
+    
+    }else if(userChoice === 2 && computerChoice === 0){
+    }else if(userChoice === 2 && computerChoice === 1){
+
+    } else if ( userChoice === computerChoice)
+      alert("you tied");
     };
   */
   });
