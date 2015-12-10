@@ -32,13 +32,25 @@ $(document).ready(function(){
 
   $(".play").on("click", function(e) {
     e.preventDefault();
-    alert("It works! You picked "+ userChoice);
+    alert("You picked "+ userChoice);
     
     var computerChoice = Math.floor(Math.random()*(rockPaperScissors.length));
-      console.log(computerChoice); //Testing my variable for computer's choice
-      console.log(userChoice);
+    console.log(computerChoice); //Testing my variable for computer's choice
       
+    if (userChoice==="rock"){
+      userChoice = 0;
+    }else if(userChoice==="paper"){
+      userChoice =1;
+    } else {
+      userChoice = 2;
+    };
+
+    console.log(userChoice);     //Testing my variable for user's Choice
+    
+
     /* Add logic here
+    
+
     rock = 0
     paper = 1
     scissors =2
