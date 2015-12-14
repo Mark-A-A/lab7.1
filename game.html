@@ -1,21 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mark's Game</title>
+  <title>Mark's Rock Paper Scissors</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/game.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 
 <body>
+  <div class ="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <h1>
+          Rock Paper Scissors
+        </h1>
+        
+      </div> <!-- end of col-md-3 -->
+      <div class="col-md-6">
+        <div class="row-directions" >
+          
+          <h2>
+            You're Playing Against the Computer. 
+          </h2>
+        </div>
+        <div class="row-directions">  <!-- row directions -->
+          
+          <h2>
+            First to 3 points wins. 
+          </h2>
+        </div>
+      </div> <!-- end of col-md-6 -->
+ 
+    <!-- <button class="btn btn-default" id="play" type="submit">Play</button> -->
+    </div> <!-- end of Row -->
 
-  <!-- <button class="btn btn-default" id="play" type="submit">Play</button> -->
-   <button class="btn btn-primary play" id="rock" type="submit">Rock</button>
-    <button class="btn btn-success play " id="paper" type="submit">Paper</button>
-     <button class="btn btn-danger play" id="scissors" type="submit">Scissors</button>
+    <div class="row" id="round">
+
+        <h2> Round:
+        </h2>
+      
+    </div>
+    
+    <div class="row" >
+      <div class="col-md-6">
+        <h2> Your Score 
+        </h2>
+        <h3 id="your-score">0</h3>
+      </div>
+      <div class="col-md-6" >
+        <h2> Computer Score 
+        </h2>
+        <h3 id="comp-score">0
+        </h3>
+      </div>
+    </div> 
+      
+    
+    <div class="row" id="btn-row"> <!-- btn-row -->
+      <div class="col-md-4">
+        <!-- Large modal -->
+        <button type="button" class="btn btn-primary play" data-toggle="modal" data-target=".bs-example-modal-lg" id="rock"data-state="on" type="submit"><i class="fa fa-hand-rock-o"></i></button>
+       <!-- <button class="btn btn-primary play" id="rock" data-state="on"></button>
+        -->
+
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4">
+      <!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+        <button class="btn btn-success play " id="paper" type="submit" data-state="on" ><i class="fa fa-hand-paper-o"></i></button>
+        
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-danger play" id="scissors" type="submit" data-state="on"><i class="fa fa-hand-scissors-o"></i></button>
+        
+      </div>
+    </div><!-- end of Row -->
 
 
+  </div> <!-- end of container-->
+  
+    
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
+<!-- Adding Animation -->
+  <script> 
+  $(window).scroll(function() {
+    $('#animatedElement').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+400) {
+        $(this).addClass("slideUp");
+      }
+    });
+  });
+</script>
   <script type="text/javascript" src="js/game.js"></script>
+
 </body>
 </html>
