@@ -34,3 +34,40 @@ h3 {
   width: 180px; 
 }
 
+
+#user-rock-icon{
+  
+
+  visibility: hidden;
+}
+
+#comp-rock-icon{
+  
+
+  visibility: hidden;
+}
+
+#user-paper-icon{
+  
+
+  visibility: hidden;
+}
+
+#comp-paper-icon{
+  
+
+  visibility: hidden;
+}
+
+#user-scissors-icon{
+  
+
+  visibility: hidden;
+}
+
+#comp-scissors-icon{
+  
+
+  visibility: hidden;
+}
+
