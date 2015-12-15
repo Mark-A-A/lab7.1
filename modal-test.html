@@ -35,11 +35,11 @@
     <!-- <button class="btn btn-default" id="play" type="submit">Play</button> -->
     </div> <!-- end of Row -->
 
-    <div class="row round" >
+    <div class="row" id="round">
 
-        <h2> Round
+        <h2> Round:
         </h2>
-        <h3 id="round-count">1</h3>
+      
     </div>
     
     <div class="row" >
@@ -60,49 +60,29 @@
     <div class="row" id="btn-row"> <!-- btn-row -->
       <div class="col-md-4">
         <!-- Large modal -->
-        <button type="button" class="btn btn-primary play" data-toggle="modal" data-target=".bs-example-modal-sm" id="rock" data-picked="rock"data-state="on" type="submit"><i class="fa fa-hand-rock-o"></i></button>
+        <button type="button" class="btn btn-primary play" data-toggle="modal" data-target=".bs-example-modal-lg" id="rock"data-state="on" type="submit"><i class="fa fa-hand-rock-o"></i></button>
        <!-- <button class="btn btn-primary play" id="rock" data-state="on"></button>
         -->
-      </div>
 
-      <!-- Second Button -->
-      <div class="col-md-4">
-      <!-- Large modal -->
-        <button type="button" class="btn btn-success play" data-toggle="modal" data-target=".bs-example-modal-sm"id="paper" data-picked="paper" data-state="on" type="submit"><i class="fa fa-hand-paper-o"></i></button>
-        
-      </div>
-        
-
-      <!-- Third Button --> 
-      <div class="col-md-4">
-        <button type="button" class="btn btn-danger play" data-toggle="modal" data-target=".bs-example-modal-sm"id="scissors" data-picked="scissors"data-state="on" type="submit"><i class="fa fa-hand-scissors-o"></i></button>
-        
-        <!-- Delete this
-        <button class="btn btn-danger play" id="scissors" type="submit" data-state="on"><i class="fa fa-hand-scissors-o"></i></button> -->
-        
-
-      </div>
-
-      <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button class="close" data-dismiss="modal">&times;</button>
-              <h2 class="modal-title">Modal Title User Pick</h2>
-            </div>
-            <div class="modal-body">
-              
-                <h4 class="modal-score">
-                  Modal Shows Score
-                </h4>
-              
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
               
             </div>
           </div>
         </div>
-      </div>
 
-      
+      </div>
+      <div class="col-md-4">
+      <!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+        <button class="btn btn-success play " id="paper" type="submit" data-state="on" ><i class="fa fa-hand-paper-o"></i></button>
+        
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-danger play" id="scissors" type="submit" data-state="on"><i class="fa fa-hand-scissors-o"></i></button>
+        
+      </div>
     </div><!-- end of Row -->
 
 
@@ -112,19 +92,10 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   
-<!-- Adding Animation 
+<!-- Adding Animation
   <script> 
-  $(window).scroll(function() {
-    $('#animatedElement').each(function(){
-    var imagePos = $(this).offset().top;
-
-    var topOfWindow = $(window).scrollTop();
-      if (imagePos < topOfWindow+400) {
-        $(this).addClass("slideUp");
-      }
-    });
-  });
-</script>-->
+ 
+</script> -->
   <script type="text/javascript" src="js/game.js"></script>
 
 </body>
